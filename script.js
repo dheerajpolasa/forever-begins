@@ -12,8 +12,8 @@
 // 🎯 COUNTDOWN CONFIGURATION
 const CONFIG = {
     // Target date and time for countdown (YYYY-MM-DDTHH:MM:SS format)
-    //targetDate: '2024-12-31T23:59:59',
-  targetDate: new Date(new Date().getTime() + 2000).getTime(),
+    targetDate: '2024-12-31T23:59:59',
+  //targetDate: new Date(new Date().getTime() + 2000).getTime(),
     
     // Love message to display when surprise is revealed
     loveMessage: `Every star in the sky pales in comparison to the light you bring to my life. Today marks the beginning of our forever journey together. I love you to the moon and back! 💫❤️`,
