@@ -1,26 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Forever Begins ❤️</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forever Begins - Our Love Countdown</title>
+    <meta name="description" content="A romantic countdown to our engagement - Forever Begins">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1 class="title">Forever Begins ❤️</h1>
+    <!-- Background Animation Container -->
+    <div class="background-animation" id="backgroundAnimation"></div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">Forever Begins</h1>
+            <p class="subtitle">Our Love Story Countdown</p>
+        </header>
 
-    <div id="countdown"></div>
+        <!-- Countdown Section -->
+        <section class="countdown-section" id="countdownSection">
+            <div class="countdown-card">
+                <h2 class="countdown-title">Until Our Forever Begins...</h2>
+                <div class="countdown-display" id="countdownDisplay">
+                    <div class="time-unit">
+                        <span class="time-number" id="days">00</span>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="hours">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="minutes">00</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="seconds">00</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <button id="surpriseBtn" class="hidden">💌 Tap me for a Surprise</button>
+        <!-- Surprise Section (Hidden Initially) -->
+        <section class="surprise-section hidden" id="surpriseSection">
+            <div class="surprise-card">
+                <button class="surprise-button" id="surpriseButton">
+                    <span class="button-text">Click me for a Surprise</span>
+                    <div class="button-sparkle"></div>
+                </button>
+            </div>
+        </section>
 
-    <div id="surpriseMessage" class="hidden">
-      <h2 id="loveMessage"></h2>
-      <canvas id="confettiCanvas"></canvas>
+        <!-- Love Message Section (Hidden Initially) -->
+        <section class="message-section hidden" id="messageSection">
+            <div class="message-card">
+                <div class="message-content">
+                    <h3 class="message-title">My Dearest Love</h3>
+                    <p class="love-message" id="loveMessage"></p>
+                    <div class="message-signature">
+                        <span>Forever yours,</span>
+                        <span class="signature">💕</span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
-  <script src="script.js"></script>
+    <!-- Animation Containers -->
+    <div class="confetti-container" id="confettiContainer"></div>
+    <div class="hearts-container" id="heartsContainer"></div>
+    <div class="butterflies-container" id="butterfliesContainer"></div>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
 </body>
 </html>
