@@ -17,13 +17,14 @@ body {
 }
 
 .container {
-  max-width: 500px;
-  width: 100%;
+  max-width: 600px;
+  width: 90%;
   background: white;
   padding: 24px;
   border-radius: 24px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   text-align: center;
+  margin: auto;
 }
 
 .title {
@@ -33,7 +34,7 @@ body {
 }
 
 #countdown {
-  font-size: 2.2rem;
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
   font-weight: bold;
   color: #222;
   margin-bottom: 30px;
@@ -70,18 +71,16 @@ button:hover {
   line-height: 1.5;
   color: #d6336c;
   padding: 12px;
-  animation: typing 3s steps(30, end), blink 0.7s infinite;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid #d6336c;
+  white-space: normal;   /* allow wrapping */
+  overflow: visible;     /* no cutoff */
+  border-right: none;    /* remove typing cursor */
+  animation: fadeIn 2s ease-in;
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-@keyframes blink {
-  50% { border-color: transparent; }
+/* Smooth fade-in for love message */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 #confettiCanvas {
