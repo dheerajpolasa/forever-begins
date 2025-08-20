@@ -1,6 +1,8 @@
-// Set your engagement date here (YYYY-MM-DD HH:MM:SS format)
+// Quick test expiry: 15 seconds from now
+const targetDate = new Date(new Date().getTime() + 15000).getTime();
+
+// Engagement date
 //const targetDate = new Date("2025-08-25 18:00:00").getTime();
-const targetDate = new Date(new Date().getTime() + 10000).getTime(); 
 
 const countdownEl = document.getElementById("countdown");
 const surpriseBtn = document.getElementById("surpriseBtn");
@@ -35,10 +37,9 @@ surpriseBtn.addEventListener("click", () => {
   surpriseBtn.classList.add("hidden");
   surpriseMessage.classList.remove("hidden");
 
-  // Customisable message
-  loveMessage.textContent = "You are my everything ❤️ Forever begins with you.";
+  loveMessage.textContent = "You are my world 🌍 Forever begins with us ❤️";
 
-  // Confetti animation
+  // Confetti burst
   const duration = 5 * 1000;
   const end = Date.now() + duration;
 
